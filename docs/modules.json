@@ -356,10 +356,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": "scsi_transport_sas"
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -471,14 +467,6 @@
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
-            "depends": ""
         },
         "iw_cm": {
             "description": "iWARP CM",
@@ -852,10 +840,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -992,8 +976,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -1007,10 +999,6 @@
         "w83793": {
             "description": "w83793 driver",
             "depends": "hwmon-vid"
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
-            "depends": ""
         },
         "wireguard": {
             "description": "WireGuard secure network tunnel",
@@ -1074,9 +1062,17 @@
             "description": "adt7475 driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
         },
+        "aic8800_fdrv": {
+            "description": "RivieraWaves 11nac driver for Linux cfg80211 (Compiled by RR for DSM)",
+            "depends": "cfg80211,aic_load_fw,usbcore"
+        },
         "aic94xx": {
             "description": "Adaptec aic94xx SAS/SATA driver",
             "depends": "libsas,scsi_transport_sas"
+        },
+        "aic_load_fw": {
+            "description": "AIC BLUETOOTH (Compiled by RR for DSM)",
+            "depends": "usbcore"
         },
         "alx": {
             "description": "Qualcomm Atheros(R) AR816x/AR817x PCI-E Ethernet Network Driver",
@@ -1192,7 +1188,7 @@
         },
         "cfg80211": {
             "description": "wireless configuration support",
-            "depends": ""
+            "depends": "rfkill"
         },
         "ch": {
             "description": "device driver for scsi media changer devices",
@@ -1418,10 +1414,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": "scsi_transport_sas"
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -1533,14 +1525,6 @@
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
-            "depends": ""
         },
         "iw_cm": {
             "description": "iWARP CM",
@@ -1894,6 +1878,14 @@
             "description": "I2C bus support for the regmap API (Compiled by RR for DSM)",
             "depends": ""
         },
+        "rfkill-gpio": {
+            "description": "gpio rfkill (Compiled by RR for DSM)",
+            "depends": "rfkill"
+        },
+        "rfkill": {
+            "description": "RF switch support (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "rndis_host": {
             "description": "USB Host side RNDIS driver",
             "depends": "usbnet,usbcore,cdc_ether"
@@ -2058,10 +2050,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -2214,8 +2202,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -2229,10 +2225,6 @@
         "w83793": {
             "description": "w83793 driver",
             "depends": "hwmon-vid"
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
-            "depends": ""
         },
         "wch": {
             "description": "WCH Multi-I/O Board Driver Module (Compiled by RR for DSM)",
@@ -2560,10 +2552,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": ""
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -2662,14 +2650,6 @@
         },
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
-            "depends": ""
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
             "depends": ""
         },
         "iw_cm": {
@@ -3044,10 +3024,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -3168,8 +3144,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -3182,10 +3166,6 @@
         },
         "w83793": {
             "description": "w83793 driver",
-            "depends": ""
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
             "depends": ""
         },
         "wireguard": {
@@ -3250,9 +3230,17 @@
             "description": "adt7475 driver (Compiled by RR for DSM)",
             "depends": ""
         },
+        "aic8800_fdrv": {
+            "description": "RivieraWaves 11nac driver for Linux cfg80211 (Compiled by RR for DSM)",
+            "depends": "cfg80211,aic_load_fw,usbcore"
+        },
         "aic94xx": {
             "description": "Adaptec aic94xx SAS/SATA driver",
             "depends": ""
+        },
+        "aic_load_fw": {
+            "description": "AIC BLUETOOTH (Compiled by RR for DSM)",
+            "depends": "usbcore"
         },
         "alx": {
             "description": "Qualcomm Atheros(R) AR816x/AR817x PCI-E Ethernet Network Driver",
@@ -3364,7 +3352,7 @@
         },
         "cfg80211": {
             "description": "wireless configuration support",
-            "depends": ""
+            "depends": "rfkill"
         },
         "ch": {
             "description": "device driver for scsi media changer devices",
@@ -3550,10 +3538,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": ""
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -3652,14 +3636,6 @@
         },
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
-            "depends": ""
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
             "depends": ""
         },
         "iw_cm": {
@@ -4018,6 +3994,14 @@
             "description": "I2C bus support for the regmap API (Compiled by RR for DSM)",
             "depends": ""
         },
+        "rfkill-gpio": {
+            "description": "gpio rfkill (Compiled by RR for DSM)",
+            "depends": "rfkill"
+        },
+        "rfkill": {
+            "description": "RF switch support (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "rndis_host": {
             "description": "USB Host side RNDIS driver",
             "depends": "usbnet,usbcore,cdc_ether"
@@ -4178,10 +4162,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -4318,8 +4298,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -4332,10 +4320,6 @@
         },
         "w83793": {
             "description": "w83793 driver",
-            "depends": ""
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
             "depends": ""
         },
         "wch": {
@@ -4664,10 +4648,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": ""
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -4766,14 +4746,6 @@
         },
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
-            "depends": ""
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
             "depends": ""
         },
         "iw_cm": {
@@ -5148,10 +5120,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -5272,8 +5240,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -5286,10 +5262,6 @@
         },
         "w83793": {
             "description": "w83793 driver",
-            "depends": ""
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
             "depends": ""
         },
         "wireguard": {
@@ -5354,9 +5326,17 @@
             "description": "adt7475 driver (Compiled by RR for DSM)",
             "depends": ""
         },
+        "aic8800_fdrv": {
+            "description": "RivieraWaves 11nac driver for Linux cfg80211 (Compiled by RR for DSM)",
+            "depends": "cfg80211,aic_load_fw,usbcore"
+        },
         "aic94xx": {
             "description": "Adaptec aic94xx SAS/SATA driver",
             "depends": ""
+        },
+        "aic_load_fw": {
+            "description": "AIC BLUETOOTH (Compiled by RR for DSM)",
+            "depends": "usbcore"
         },
         "alx": {
             "description": "Qualcomm Atheros(R) AR816x/AR817x PCI-E Ethernet Network Driver",
@@ -5468,7 +5448,7 @@
         },
         "cfg80211": {
             "description": "wireless configuration support",
-            "depends": ""
+            "depends": "rfkill"
         },
         "ch": {
             "description": "device driver for scsi media changer devices",
@@ -5654,10 +5634,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": ""
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -5756,14 +5732,6 @@
         },
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
-            "depends": ""
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
             "depends": ""
         },
         "iw_cm": {
@@ -6122,6 +6090,14 @@
             "description": "I2C bus support for the regmap API (Compiled by RR for DSM)",
             "depends": ""
         },
+        "rfkill-gpio": {
+            "description": "gpio rfkill (Compiled by RR for DSM)",
+            "depends": "rfkill"
+        },
+        "rfkill": {
+            "description": "RF switch support (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "rndis_host": {
             "description": "USB Host side RNDIS driver",
             "depends": "usbnet,usbcore,cdc_ether"
@@ -6282,10 +6258,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -6422,8 +6394,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -6436,10 +6416,6 @@
         },
         "w83793": {
             "description": "w83793 driver",
-            "depends": ""
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
             "depends": ""
         },
         "wch": {
@@ -6768,10 +6744,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": ""
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -6870,14 +6842,6 @@
         },
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
-            "depends": ""
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
             "depends": ""
         },
         "iw_cm": {
@@ -7252,10 +7216,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -7376,8 +7336,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -7390,10 +7358,6 @@
         },
         "w83793": {
             "description": "w83793 driver",
-            "depends": ""
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
             "depends": ""
         },
         "wireguard": {
@@ -7458,9 +7422,17 @@
             "description": "adt7475 driver (Compiled by RR for DSM)",
             "depends": ""
         },
+        "aic8800_fdrv": {
+            "description": "RivieraWaves 11nac driver for Linux cfg80211 (Compiled by RR for DSM)",
+            "depends": "cfg80211,aic_load_fw,usbcore"
+        },
         "aic94xx": {
             "description": "Adaptec aic94xx SAS/SATA driver",
             "depends": ""
+        },
+        "aic_load_fw": {
+            "description": "AIC BLUETOOTH (Compiled by RR for DSM)",
+            "depends": "usbcore"
         },
         "alx": {
             "description": "Qualcomm Atheros(R) AR816x/AR817x PCI-E Ethernet Network Driver",
@@ -7572,7 +7544,7 @@
         },
         "cfg80211": {
             "description": "wireless configuration support",
-            "depends": ""
+            "depends": "rfkill"
         },
         "ch": {
             "description": "device driver for scsi media changer devices",
@@ -7758,10 +7730,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": ""
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -7860,14 +7828,6 @@
         },
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
-            "depends": ""
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
             "depends": ""
         },
         "iw_cm": {
@@ -8226,6 +8186,14 @@
             "description": "I2C bus support for the regmap API (Compiled by RR for DSM)",
             "depends": ""
         },
+        "rfkill-gpio": {
+            "description": "gpio rfkill (Compiled by RR for DSM)",
+            "depends": "rfkill"
+        },
+        "rfkill": {
+            "description": "RF switch support (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "rndis_host": {
             "description": "USB Host side RNDIS driver",
             "depends": "usbnet,usbcore,cdc_ether"
@@ -8386,10 +8354,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -8526,8 +8490,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -8540,10 +8512,6 @@
         },
         "w83793": {
             "description": "w83793 driver",
-            "depends": ""
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
             "depends": ""
         },
         "wch": {
@@ -8880,10 +8848,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": ""
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -8986,14 +8950,6 @@
         },
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
-            "depends": ""
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
             "depends": ""
         },
         "iw_cm": {
@@ -9368,10 +9324,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -9488,8 +9440,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -9502,10 +9462,6 @@
         },
         "w83793": {
             "description": "w83793 driver",
-            "depends": ""
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
             "depends": ""
         },
         "wireguard": {
@@ -9570,9 +9526,17 @@
             "description": "adt7475 driver (Compiled by RR for DSM)",
             "depends": ""
         },
+        "aic8800_fdrv": {
+            "description": "RivieraWaves 11nac driver for Linux cfg80211 (Compiled by RR for DSM)",
+            "depends": "cfg80211,aic_load_fw,usbcore"
+        },
         "aic94xx": {
             "description": "Adaptec aic94xx SAS/SATA driver",
             "depends": ""
+        },
+        "aic_load_fw": {
+            "description": "AIC BLUETOOTH (Compiled by RR for DSM)",
+            "depends": "usbcore"
         },
         "alx": {
             "description": "Qualcomm Atheros(R) AR816x/AR817x PCI-E Ethernet Network Driver",
@@ -9684,7 +9648,7 @@
         },
         "cfg80211": {
             "description": "wireless configuration support",
-            "depends": ""
+            "depends": "rfkill"
         },
         "ch": {
             "description": "device driver for scsi media changer devices",
@@ -9878,10 +9842,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": ""
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -9984,14 +9944,6 @@
         },
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
-            "depends": ""
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
             "depends": ""
         },
         "iw_cm": {
@@ -10350,6 +10302,14 @@
             "description": "I2C bus support for the regmap API (Compiled by RR for DSM)",
             "depends": ""
         },
+        "rfkill-gpio": {
+            "description": "gpio rfkill (Compiled by RR for DSM)",
+            "depends": "rfkill"
+        },
+        "rfkill": {
+            "description": "RF switch support (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "rndis_host": {
             "description": "USB Host side RNDIS driver",
             "depends": "usbnet,usbcore,cdc_ether"
@@ -10510,10 +10470,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -10646,8 +10602,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -10660,10 +10624,6 @@
         },
         "w83793": {
             "description": "w83793 driver",
-            "depends": ""
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
             "depends": ""
         },
         "wch": {
@@ -11004,10 +10964,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": "scsi_transport_sas"
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -11111,14 +11067,6 @@
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
-            "depends": ""
         },
         "iw_cm": {
             "description": "iWARP CM",
@@ -11492,10 +11440,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -11612,8 +11556,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -11627,10 +11579,6 @@
         "w83793": {
             "description": "w83793 driver",
             "depends": "hwmon-vid"
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
-            "depends": ""
         },
         "wireguard": {
             "description": "WireGuard secure network tunnel",
@@ -11694,9 +11642,17 @@
             "description": "adt7475 driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
         },
+        "aic8800_fdrv": {
+            "description": "RivieraWaves 11nac driver for Linux cfg80211 (Compiled by RR for DSM)",
+            "depends": "cfg80211,aic_load_fw,usbcore"
+        },
         "aic94xx": {
             "description": "Adaptec aic94xx SAS/SATA driver",
             "depends": "libsas,scsi_transport_sas"
+        },
+        "aic_load_fw": {
+            "description": "AIC BLUETOOTH (Compiled by RR for DSM)",
+            "depends": "usbcore"
         },
         "alx": {
             "description": "Qualcomm Atheros(R) AR816x/AR817x PCI-E Ethernet Network Driver",
@@ -11804,7 +11760,7 @@
         },
         "cfg80211": {
             "description": "wireless configuration support",
-            "depends": ""
+            "depends": "rfkill"
         },
         "ch": {
             "description": "device driver for scsi media changer devices",
@@ -12006,10 +11962,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": "scsi_transport_sas"
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -12113,14 +12065,6 @@
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
-            "depends": ""
         },
         "iw_cm": {
             "description": "iWARP CM",
@@ -12478,6 +12422,14 @@
             "description": "I2C bus support for the regmap API (Compiled by RR for DSM)",
             "depends": ""
         },
+        "rfkill-gpio": {
+            "description": "gpio rfkill (Compiled by RR for DSM)",
+            "depends": "rfkill"
+        },
+        "rfkill": {
+            "description": "RF switch support (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "rndis_host": {
             "description": "USB Host side RNDIS driver",
             "depends": "usbnet,usbcore,cdc_ether"
@@ -12638,10 +12590,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -12774,8 +12722,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -12789,10 +12745,6 @@
         "w83793": {
             "description": "w83793 driver",
             "depends": "hwmon-vid"
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
-            "depends": ""
         },
         "wch": {
             "description": "WCH Multi-I/O Board Driver Module (Compiled by RR for DSM)",
@@ -12864,9 +12816,17 @@
             "description": "adt7475 driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
         },
+        "aic8800_fdrv": {
+            "description": "RivieraWaves 11nac driver for Linux cfg80211 (Compiled by RR for DSM)",
+            "depends": "cfg80211,aic_load_fw,usbcore"
+        },
         "aic94xx": {
             "description": "Adaptec aic94xx SAS/SATA driver",
             "depends": "libsas,scsi_transport_sas"
+        },
+        "aic_load_fw": {
+            "description": "AIC BLUETOOTH (Compiled by RR for DSM)",
+            "depends": "usbcore"
         },
         "alcor_pci": {
             "description": "PCI driver for Alcor Micro AU6601 Secure Digital Host Controller Interface",
@@ -12982,7 +12942,7 @@
         },
         "cfg80211": {
             "description": "wireless configuration support",
-            "depends": ""
+            "depends": "rfkill"
         },
         "ch": {
             "description": "device driver for scsi media changer devices",
@@ -13196,10 +13156,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.20-200",
             "depends": "scsi_transport_sas,check_signature"
         },
-        "hpwdt": {
-            "description": "hpe watchdog driver",
-            "depends": "watchdog"
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -13375,14 +13331,6 @@
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
-            "depends": "watchdog"
         },
         "iw_cm": {
             "description": "iWARP CM",
@@ -13832,6 +13780,14 @@
             "description": "I2C bus support for the regmap API (Compiled by RR for DSM)",
             "depends": ""
         },
+        "rfkill-gpio": {
+            "description": "gpio rfkill (Compiled by RR for DSM)",
+            "depends": "rfkill"
+        },
+        "rfkill": {
+            "description": "RF switch support (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "rndis_host": {
             "description": "USB Host side RNDIS driver",
             "depends": "usbnet,usbcore,cdc_ether"
@@ -14076,10 +14032,6 @@
             "description": "Marvell Yukon 2 Gigabit Ethernet driver",
             "depends": ""
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sr_mod": {
             "description": "SCSI cdrom (sr) driver",
             "depends": "cdrom"
@@ -14228,9 +14180,29 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_virtio_transport": {
+            "description": "virtio transport for vsock (Compiled by RR for DSM)",
+            "depends": "vmw_vsock_virtio_transport_common,virtio_ring,vsock,virtio"
+        },
+        "vmw_vsock_virtio_transport_common": {
+            "description": "common code for virtio vsock",
+            "depends": "vsock"
+        },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
             "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
+            "depends": ""
+        },
+        "vsock_loopback": {
+            "description": "loopback transport for vsock",
+            "depends": "vmw_vsock_virtio_transport_common,vsock"
         },
         "vub300": {
             "description": "VUB300 USB to SD/MMC/SDIO adapter driver",
@@ -14243,10 +14215,6 @@
         "w83793": {
             "description": "w83793 driver",
             "depends": "hwmon-vid"
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
-            "depends": ""
         },
         "wch": {
             "description": "WCH Multi-I/O Board Driver Module (Compiled by RR for DSM)",
@@ -14430,9 +14398,17 @@
             "description": "adt7475 driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
         },
+        "aic8800_fdrv": {
+            "description": "RivieraWaves 11nac driver for Linux cfg80211 (Compiled by RR for DSM)",
+            "depends": "cfg80211,aic_load_fw,usbcore"
+        },
         "aic94xx": {
             "description": "Adaptec aic94xx SAS/SATA driver",
             "depends": "libsas,scsi_transport_sas"
+        },
+        "aic_load_fw": {
+            "description": "AIC BLUETOOTH (Compiled by RR for DSM)",
+            "depends": "usbcore"
         },
         "alcor_pci": {
             "description": "PCI driver for Alcor Micro AU6601 Secure Digital Host Controller Interface",
@@ -14552,7 +14528,7 @@
         },
         "cfg80211": {
             "description": "wireless configuration support",
-            "depends": ""
+            "depends": "rfkill"
         },
         "ch": {
             "description": "device driver for scsi media changer devices",
@@ -14770,10 +14746,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.20-200",
             "depends": "scsi_transport_sas,check_signature"
         },
-        "hpwdt": {
-            "description": "hpe watchdog driver",
-            "depends": "watchdog"
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -14949,14 +14921,6 @@
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
-            "depends": "watchdog"
         },
         "iw_cm": {
             "description": "iWARP CM",
@@ -15406,6 +15370,14 @@
             "description": "I2C bus support for the regmap API (Compiled by RR for DSM)",
             "depends": ""
         },
+        "rfkill-gpio": {
+            "description": "gpio rfkill (Compiled by RR for DSM)",
+            "depends": "rfkill"
+        },
+        "rfkill": {
+            "description": "RF switch support (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "rndis_host": {
             "description": "USB Host side RNDIS driver",
             "depends": "usbnet,usbcore,cdc_ether"
@@ -15650,10 +15622,6 @@
             "description": "Marvell Yukon 2 Gigabit Ethernet driver",
             "depends": ""
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sr_mod": {
             "description": "SCSI cdrom (sr) driver",
             "depends": "cdrom"
@@ -15806,9 +15774,29 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_virtio_transport": {
+            "description": "virtio transport for vsock (Compiled by RR for DSM)",
+            "depends": "vmw_vsock_virtio_transport_common,virtio_ring,vsock,virtio"
+        },
+        "vmw_vsock_virtio_transport_common": {
+            "description": "common code for virtio vsock",
+            "depends": "vsock"
+        },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
             "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
+            "depends": ""
+        },
+        "vsock_loopback": {
+            "description": "loopback transport for vsock",
+            "depends": "vmw_vsock_virtio_transport_common,vsock"
         },
         "vub300": {
             "description": "VUB300 USB to SD/MMC/SDIO adapter driver",
@@ -15821,10 +15809,6 @@
         "w83793": {
             "description": "w83793 driver",
             "depends": "hwmon-vid"
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
-            "depends": ""
         },
         "wch": {
             "description": "WCH Multi-I/O Board Driver Module (Compiled by RR for DSM)",
@@ -16297,10 +16281,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": "scsi_transport_sas"
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -16412,14 +16392,6 @@
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
-            "depends": ""
         },
         "iw_cm": {
             "description": "iWARP CM",
@@ -16793,10 +16765,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -16933,8 +16901,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -16948,10 +16924,6 @@
         "w83793": {
             "description": "w83793 driver",
             "depends": "hwmon-vid"
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
-            "depends": ""
         },
         "wireguard": {
             "description": "WireGuard secure network tunnel",
@@ -17015,9 +16987,17 @@
             "description": "adt7475 driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
         },
+        "aic8800_fdrv": {
+            "description": "RivieraWaves 11nac driver for Linux cfg80211 (Compiled by RR for DSM)",
+            "depends": "cfg80211,aic_load_fw,usbcore"
+        },
         "aic94xx": {
             "description": "Adaptec aic94xx SAS/SATA driver",
             "depends": "libsas,scsi_transport_sas"
+        },
+        "aic_load_fw": {
+            "description": "AIC BLUETOOTH (Compiled by RR for DSM)",
+            "depends": "usbcore"
         },
         "alx": {
             "description": "Qualcomm Atheros(R) AR816x/AR817x PCI-E Ethernet Network Driver",
@@ -17129,7 +17109,7 @@
         },
         "cfg80211": {
             "description": "wireless configuration support",
-            "depends": ""
+            "depends": "rfkill"
         },
         "ch": {
             "description": "device driver for scsi media changer devices",
@@ -17347,10 +17327,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": "scsi_transport_sas"
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -17462,14 +17438,6 @@
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
-            "depends": ""
         },
         "iw_cm": {
             "description": "iWARP CM",
@@ -17823,6 +17791,14 @@
             "description": "I2C bus support for the regmap API (Compiled by RR for DSM)",
             "depends": ""
         },
+        "rfkill-gpio": {
+            "description": "gpio rfkill (Compiled by RR for DSM)",
+            "depends": "rfkill"
+        },
+        "rfkill": {
+            "description": "RF switch support (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "rndis_host": {
             "description": "USB Host side RNDIS driver",
             "depends": "usbnet,usbcore,cdc_ether"
@@ -17987,10 +17963,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -18143,8 +18115,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -18158,10 +18138,6 @@
         "w83793": {
             "description": "w83793 driver",
             "depends": "hwmon-vid"
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
-            "depends": ""
         },
         "wch": {
             "description": "WCH Multi-I/O Board Driver Module (Compiled by RR for DSM)",
@@ -18505,10 +18481,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": ""
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -18611,14 +18583,6 @@
         },
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
-            "depends": ""
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
             "depends": ""
         },
         "iw_cm": {
@@ -18993,10 +18957,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -19113,8 +19073,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -19127,10 +19095,6 @@
         },
         "w83793": {
             "description": "w83793 driver",
-            "depends": ""
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
             "depends": ""
         },
         "wireguard": {
@@ -19195,9 +19159,17 @@
             "description": "adt7475 driver (Compiled by RR for DSM)",
             "depends": ""
         },
+        "aic8800_fdrv": {
+            "description": "RivieraWaves 11nac driver for Linux cfg80211 (Compiled by RR for DSM)",
+            "depends": "cfg80211,aic_load_fw,usbcore"
+        },
         "aic94xx": {
             "description": "Adaptec aic94xx SAS/SATA driver",
             "depends": ""
+        },
+        "aic_load_fw": {
+            "description": "AIC BLUETOOTH (Compiled by RR for DSM)",
+            "depends": "usbcore"
         },
         "alx": {
             "description": "Qualcomm Atheros(R) AR816x/AR817x PCI-E Ethernet Network Driver",
@@ -19309,7 +19281,7 @@
         },
         "cfg80211": {
             "description": "wireless configuration support",
-            "depends": ""
+            "depends": "rfkill"
         },
         "ch": {
             "description": "device driver for scsi media changer devices",
@@ -19511,10 +19483,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": ""
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -19617,14 +19585,6 @@
         },
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
-            "depends": ""
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
             "depends": ""
         },
         "iw_cm": {
@@ -19983,6 +19943,14 @@
             "description": "I2C bus support for the regmap API (Compiled by RR for DSM)",
             "depends": ""
         },
+        "rfkill-gpio": {
+            "description": "gpio rfkill (Compiled by RR for DSM)",
+            "depends": "rfkill"
+        },
+        "rfkill": {
+            "description": "RF switch support (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "rndis_host": {
             "description": "USB Host side RNDIS driver",
             "depends": "usbnet,usbcore,cdc_ether"
@@ -20143,10 +20111,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -20279,8 +20243,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -20293,10 +20265,6 @@
         },
         "w83793": {
             "description": "w83793 driver",
-            "depends": ""
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
             "depends": ""
         },
         "wch": {
@@ -20649,10 +20617,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": "scsi_transport_sas,check_signature"
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -20764,14 +20728,6 @@
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
-            "depends": ""
         },
         "iw_cm": {
             "description": "iWARP CM",
@@ -21149,10 +21105,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -21269,8 +21221,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -21284,10 +21244,6 @@
         "w83793": {
             "description": "w83793 driver",
             "depends": "hwmon-vid"
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
-            "depends": ""
         },
         "wireguard": {
             "description": "WireGuard secure network tunnel",
@@ -21347,9 +21303,17 @@
             "description": "ADT7470 driver (Compiled by RR for DSM)",
             "depends": ""
         },
+        "aic8800_fdrv": {
+            "description": "RivieraWaves 11nac driver for Linux cfg80211 (Compiled by RR for DSM)",
+            "depends": "cfg80211,aic_load_fw,usbcore"
+        },
         "aic94xx": {
             "description": "Adaptec aic94xx SAS/SATA driver",
             "depends": "libsas,scsi_transport_sas"
+        },
+        "aic_load_fw": {
+            "description": "AIC BLUETOOTH (Compiled by RR for DSM)",
+            "depends": "usbcore"
         },
         "alx": {
             "description": "Qualcomm Atheros(R) AR816x/AR817x PCI-E Ethernet Network Driver",
@@ -21461,7 +21425,7 @@
         },
         "cfg80211": {
             "description": "wireless configuration support",
-            "depends": ""
+            "depends": "rfkill"
         },
         "ch": {
             "description": "device driver for scsi media changer devices",
@@ -21675,10 +21639,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": "scsi_transport_sas,check_signature"
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -21790,14 +21750,6 @@
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
-            "depends": ""
         },
         "iw_cm": {
             "description": "iWARP CM",
@@ -22155,6 +22107,14 @@
             "description": "I2C bus support for the regmap API (Compiled by RR for DSM)",
             "depends": ""
         },
+        "rfkill-gpio": {
+            "description": "gpio rfkill (Compiled by RR for DSM)",
+            "depends": "rfkill"
+        },
+        "rfkill": {
+            "description": "RF switch support (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "rndis_host": {
             "description": "USB Host side RNDIS driver",
             "depends": "usbnet,usbcore,cdc_ether"
@@ -22319,10 +22279,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -22455,8 +22411,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -22470,10 +22434,6 @@
         "w83793": {
             "description": "w83793 driver",
             "depends": "hwmon-vid"
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
-            "depends": ""
         },
         "wch": {
             "description": "WCH Multi-I/O Board Driver Module (Compiled by RR for DSM)",
@@ -22829,10 +22789,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": "scsi_transport_sas,check_signature"
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -22944,14 +22900,6 @@
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
-            "depends": ""
         },
         "iw_cm": {
             "description": "iWARP CM",
@@ -23337,10 +23285,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -23457,8 +23401,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -23472,10 +23424,6 @@
         "w83793": {
             "description": "w83793 driver",
             "depends": "hwmon-vid"
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
-            "depends": ""
         },
         "wireguard": {
             "description": "WireGuard secure network tunnel",
@@ -23539,9 +23487,17 @@
             "description": "adt7475 driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
         },
+        "aic8800_fdrv": {
+            "description": "RivieraWaves 11nac driver for Linux cfg80211 (Compiled by RR for DSM)",
+            "depends": "cfg80211,aic_load_fw"
+        },
         "aic94xx": {
             "description": "Adaptec aic94xx SAS/SATA driver",
             "depends": "libsas,scsi_transport_sas"
+        },
+        "aic_load_fw": {
+            "description": "AIC BLUETOOTH (Compiled by RR for DSM)",
+            "depends": ""
         },
         "alx": {
             "description": "Qualcomm Atheros(R) AR816x/AR817x PCI-E Ethernet Network Driver",
@@ -23653,7 +23609,7 @@
         },
         "cfg80211": {
             "description": "wireless configuration support",
-            "depends": ""
+            "depends": "rfkill"
         },
         "ch": {
             "description": "device driver for scsi media changer devices",
@@ -23867,10 +23823,6 @@
             "description": "Driver for HP Smart Array Controller version 3.4.14-0",
             "depends": "scsi_transport_sas,check_signature"
         },
-        "hpwdt": {
-            "description": "hp watchdog driver",
-            "depends": ""
-        },
         "hvc_console": {
             "description": "Hypervisor Virtual Console Driver (Compiled by RR for DSM)",
             "depends": ""
@@ -23982,14 +23934,6 @@
         "it87": {
             "description": "IT8705F/IT871xF/IT872xF hardware monitoring driver (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
-        },
-        "it8712f_wdt": {
-            "description": "IT8712F Watchdog Driver",
-            "depends": ""
-        },
-        "it87_wdt": {
-            "description": "Hardware Watchdog Device Driver for IT87xx EC-LPC I/O",
-            "depends": ""
         },
         "iw_cm": {
             "description": "iWARP CM",
@@ -24351,6 +24295,14 @@
             "description": "I2C bus support for the regmap API (Compiled by RR for DSM)",
             "depends": ""
         },
+        "rfkill-gpio": {
+            "description": "gpio rfkill (Compiled by RR for DSM)",
+            "depends": "rfkill"
+        },
+        "rfkill": {
+            "description": "RF switch support (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "rndis_host": {
             "description": "USB Host side RNDIS driver",
             "depends": "usbnet,cdc_ether"
@@ -24519,10 +24471,6 @@
             "description": "Generic software cursor",
             "depends": "fb"
         },
-        "softdog": {
-            "description": "Software Watchdog Device Driver",
-            "depends": "watchdog"
-        },
         "sp2": {
             "description": "CIMaX SP2/HF CI driver",
             "depends": "dvb-core"
@@ -24655,8 +24603,16 @@
             "description": "VMware Virtual Machine Communication Interface.",
             "depends": ""
         },
+        "vmw_vsock_vmci_transport": {
+            "description": "VMCI transport for Virtual Sockets (Compiled by RR for DSM)",
+            "depends": "vmw_vmci,vsock"
+        },
         "vmxnet3": {
             "description": "VMware vmxnet3 virtual NIC driver",
+            "depends": ""
+        },
+        "vsock": {
+            "description": "VMware Virtual Socket Family (Compiled by RR for DSM)",
             "depends": ""
         },
         "vub300": {
@@ -24670,10 +24626,6 @@
         "w83793": {
             "description": "w83793 driver",
             "depends": "hwmon-vid"
-        },
-        "watchdog": {
-            "description": "WatchDog Timer Driver Core",
-            "depends": ""
         },
         "wch": {
             "description": "WCH Multi-I/O Board Driver Module (Compiled by RR for DSM)",
