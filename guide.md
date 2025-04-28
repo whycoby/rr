@@ -270,14 +270,19 @@
   lsof -i :7681                                    # 查看 7681 端口占用情况
 
   # CPU
-  cat /sys/devices/system/cpu/cpufreq/boost        # 查看 CPU 睿频状态
-  echo 1 > /sys/devices/system/cpu/cpufreq/boost   # 开启 CPU 睿频
-  echo 0 > /sys/devices/system/cpu/cpufreq/boost   # 关闭 CPU 睿频
-  cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_available_governors # 查看可用的 CPU 频率调节器状态
-  cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor            # 查看 CPU 频率调节器状态
-  cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq            # 查看 CPU 当前频率 
-  cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq            # 查看 CPU 最大频率
-  cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq            # 查看 CPU 最小频率
+  cat /sys/devices/system/cpu/cpufreq/boost                                    # 查看 CPU 睿频状态
+  echo 1 > /sys/devices/system/cpu/cpufreq/boost                               # 开启 CPU 睿频
+  echo 0 > /sys/devices/system/cpu/cpufreq/boost                               # 关闭 CPU 睿频
+  cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_available_governors         # 查看可用的 CPU 频率调节器状态
+  cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor                    # 查看 CPU 频率调节器状态
+  echo userspace | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor   # 设置 CPU 频率调节器状态为 userspace
+  cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq                    # 查看 CPU 当前频率
+  cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq                    # 查看 CPU 最大频率
+  echo 2000000 | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq     # 设置 CPU 最大频率
+  cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_min_freq                    # 查看 CPU 最小频率
+  echo 1000000 | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_min_freq     # 设置 CPU 最小频率
+  cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_setspeed                    # 查看 CPU 设置频率
+  echo 1000000 | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_setspeed     # 设置 CPU 设置频率
 
 
   # 日志相关
@@ -295,7 +300,7 @@
   lspci -d ::302                                   # 查看 3D 控制器 (不是 VGA 兼容)
 
   # Intel GPU
-  lspci -nd ::300 | cut -d " " -f 3                # PIDVID 
+  lspci -nd ::300 | cut -d' ' -f3                  # PIDVID 
   ls /dev/dri                                      # 查看显卡设备
   cat /sys/kernel/debug/dri/0/i915_frequency_info  # 显卡驱动详细信息
 
@@ -318,9 +323,18 @@
   synodsdefault --reinstall                        # 重装系统
   synodsdefault --factory-default                  # 重置系统 (清空全部数据)
 
+  # 虚拟机
+  virsh -h                                         # 列出所有虚拟机命令
+  virsh list --all                                 # 列出所有虚拟机
+  virsh console <guest_name>                       # 进入虚拟机控制台
+
+  etcdctl -h                                       # 列出所有 etcd 命令
+  etcdctl ls /syno/live_cluster/guests/            # 列出所有虚拟机 (etcd)
+
   # API
   # 获取系统信息
-  synowebapi --exec api=SYNO.Core.System method=info
+  synowebapi --exec api=SYNO.Core.System method=info version=3
+  synowebapi --exec api=SYNO.Core.System method=info version=3 type="firmware"
   # 获取设备信息
   synowebapi --exec api=SYNO.Core.System.Utilization method=get version=1
   # 关闭 自动 https 重定向

@@ -460,6 +460,10 @@
             "description": "IRQ bypass manager utility module",
             "depends": ""
         },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
+            "depends": "libsas,scsi_transport_sas"
+        },
         "iscsi_tcp": {
             "description": "iSCSI/TCP data-path",
             "depends": "libiscsi,libiscsi_tcp"
@@ -1003,6 +1007,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "apollolake-4.4.302": {
@@ -1518,6 +1526,10 @@
             "description": "IRQ bypass manager utility module",
             "depends": ""
         },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
+            "depends": "libsas,scsi_transport_sas"
+        },
         "iscsi_tcp": {
             "description": "iSCSI/TCP data-path",
             "depends": "libiscsi,libiscsi_tcp"
@@ -2237,6 +2249,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "broadwell-4.4.180": {
@@ -2642,6 +2658,10 @@
         },
         "irqbypass": {
             "description": "IRQ bypass manager utility module",
+            "depends": ""
+        },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
             "depends": ""
         },
         "iscsi_tcp": {
@@ -3171,6 +3191,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "broadwell-4.4.302": {
@@ -3630,6 +3654,10 @@
             "description": "IRQ bypass manager utility module",
             "depends": ""
         },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "iscsi_tcp": {
             "description": "iSCSI/TCP data-path",
             "depends": "libiscsi,libiscsi_tcp"
@@ -4333,6 +4361,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "broadwellnk-4.4.180": {
@@ -4738,6 +4770,10 @@
         },
         "irqbypass": {
             "description": "IRQ bypass manager utility module",
+            "depends": ""
+        },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
             "depends": ""
         },
         "iscsi_tcp": {
@@ -5267,6 +5303,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "broadwellnk-4.4.302": {
@@ -5726,6 +5766,10 @@
             "description": "IRQ bypass manager utility module",
             "depends": ""
         },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "iscsi_tcp": {
             "description": "iSCSI/TCP data-path",
             "depends": "libiscsi,libiscsi_tcp"
@@ -6429,6 +6473,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "broadwellnkv2-4.4.180": {
@@ -6834,6 +6882,10 @@
         },
         "irqbypass": {
             "description": "IRQ bypass manager utility module",
+            "depends": ""
+        },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
             "depends": ""
         },
         "iscsi_tcp": {
@@ -7363,6 +7415,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "broadwellnkv2-4.4.302": {
@@ -7822,6 +7878,10 @@
             "description": "IRQ bypass manager utility module",
             "depends": ""
         },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "iscsi_tcp": {
             "description": "iSCSI/TCP data-path",
             "depends": "libiscsi,libiscsi_tcp"
@@ -8525,6 +8585,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "broadwellntbap-4.4.180": {
@@ -8942,6 +9006,10 @@
         },
         "irqbypass": {
             "description": "IRQ bypass manager utility module",
+            "depends": ""
+        },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
             "depends": ""
         },
         "iscsi_tcp": {
@@ -9467,6 +9535,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "broadwellntbap-4.4.302": {
@@ -9938,6 +10010,10 @@
             "description": "IRQ bypass manager utility module",
             "depends": ""
         },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "iscsi_tcp": {
             "description": "iSCSI/TCP data-path",
             "depends": "libiscsi,libiscsi_tcp"
@@ -10637,6 +10713,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "denverton-4.4.180": {
@@ -11059,6 +11139,10 @@
         "irqbypass": {
             "description": "IRQ bypass manager utility module",
             "depends": ""
+        },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
+            "depends": "libsas,scsi_transport_sas"
         },
         "iscsi_tcp": {
             "description": "iSCSI/TCP data-path",
@@ -11583,6 +11667,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "denverton-4.4.302": {
@@ -12058,6 +12146,10 @@
             "description": "IRQ bypass manager utility module",
             "depends": ""
         },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
+            "depends": "libsas,scsi_transport_sas"
+        },
         "iscsi_tcp": {
             "description": "iSCSI/TCP data-path",
             "depends": "libiscsi,libiscsi_tcp"
@@ -12757,6 +12849,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "epyc7002-7.1-5.10.55": {
@@ -13148,6 +13244,10 @@
             "description": "TI HD3SS3220 DRP Port Controller Driver",
             "depends": "regmap-i2c,typec"
         },
+        "hinic": {
+            "description": "Huawei Intelligent NIC driver (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "hpilo": {
             "description": "hpilo (Compiled by RR for DSM)",
             "depends": ""
@@ -13323,6 +13423,10 @@
         "irqbypass": {
             "description": "IRQ bypass manager utility module",
             "depends": ""
+        },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
+            "depends": "libsas,scsi_transport_sas"
         },
         "iscsi_tcp": {
             "description": "iSCSI/TCP data-path",
@@ -14339,6 +14443,10 @@
         "xz_dec": {
             "description": "XZ decompressor",
             "depends": ""
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "epyc7002-7.2-5.10.55": {
@@ -14738,6 +14846,10 @@
             "description": "TI HD3SS3220 DRP Port Controller Driver",
             "depends": "regmap-i2c,typec"
         },
+        "hinic": {
+            "description": "Huawei Intelligent NIC driver (Compiled by RR for DSM)",
+            "depends": ""
+        },
         "hpilo": {
             "description": "hpilo (Compiled by RR for DSM)",
             "depends": ""
@@ -14913,6 +15025,10 @@
         "irqbypass": {
             "description": "IRQ bypass manager utility module",
             "depends": ""
+        },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
+            "depends": "libsas,scsi_transport_sas"
         },
         "iscsi_tcp": {
             "description": "iSCSI/TCP data-path",
@@ -15933,6 +16049,10 @@
         "xz_dec": {
             "description": "XZ decompressor",
             "depends": ""
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "firmware": {},
@@ -16384,6 +16504,10 @@
         "irqbypass": {
             "description": "IRQ bypass manager utility module",
             "depends": ""
+        },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
+            "depends": "libsas,scsi_transport_sas"
         },
         "iscsi_tcp": {
             "description": "iSCSI/TCP data-path",
@@ -16928,6 +17052,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "geminilake-4.4.302": {
@@ -17431,6 +17559,10 @@
             "description": "IRQ bypass manager utility module",
             "depends": ""
         },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
+            "depends": "libsas,scsi_transport_sas"
+        },
         "iscsi_tcp": {
             "description": "iSCSI/TCP data-path",
             "depends": "libiscsi,libiscsi_tcp"
@@ -18150,6 +18282,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "purley-4.4.180": {
@@ -18575,6 +18711,10 @@
         },
         "irqbypass": {
             "description": "IRQ bypass manager utility module",
+            "depends": ""
+        },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
             "depends": ""
         },
         "iscsi_tcp": {
@@ -19100,6 +19240,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "purley-4.4.302": {
@@ -19577,6 +19721,10 @@
         },
         "irqbypass": {
             "description": "IRQ bypass manager utility module",
+            "depends": ""
+        },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
             "depends": ""
         },
         "iscsi_tcp": {
@@ -20278,6 +20426,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "r1000-4.4.180": {
@@ -20720,6 +20872,10 @@
         "irqbypass": {
             "description": "IRQ bypass manager utility module",
             "depends": ""
+        },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
+            "depends": "libsas,scsi_transport_sas"
         },
         "iscsi_tcp": {
             "description": "iSCSI/TCP data-path",
@@ -21248,6 +21404,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "r1000-4.4.302": {
@@ -21743,6 +21903,10 @@
             "description": "IRQ bypass manager utility module",
             "depends": ""
         },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
+            "depends": "libsas,scsi_transport_sas"
+        },
         "iscsi_tcp": {
             "description": "iSCSI/TCP data-path",
             "depends": "libiscsi,libiscsi_tcp"
@@ -22446,6 +22610,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "v1000-4.4.180": {
@@ -22892,6 +23060,10 @@
         "irqbypass": {
             "description": "IRQ bypass manager utility module",
             "depends": ""
+        },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
+            "depends": "libsas,scsi_transport_sas"
         },
         "iscsi_tcp": {
             "description": "iSCSI/TCP data-path",
@@ -23428,6 +23600,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     },
     "v1000-4.4.302": {
@@ -23926,6 +24102,10 @@
         "irqbypass": {
             "description": "IRQ bypass manager utility module",
             "depends": ""
+        },
+        "isci": {
+            "description": "Intel(R) C600 SAS Controller Driver (Compiled by RR for DSM)",
+            "depends": "libsas,scsi_transport_sas"
         },
         "iscsi_tcp": {
             "description": "iSCSI/TCP data-path",
@@ -24638,6 +24818,10 @@
         "wireguard": {
             "description": "WireGuard secure network tunnel",
             "depends": "ipv6,udp_tunnel,ip6_udp_tunnel"
+        },
+        "yt6801": {
+            "description": "Motorcomm YT6801 Gigabit Ethernet Driver (Compiled by RR for DSM)",
+            "depends": ""
         }
     }
 }
